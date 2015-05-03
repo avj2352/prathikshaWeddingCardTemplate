@@ -1,0 +1,343 @@
+/* Style from Caledario: */
+
+.fc-calendar-wrap {
+    /*border: 1px solid #c7254e;*/
+	margin-top: 300px;
+}
+
+.fc-calendar-wrap h2 {
+	color: #fff;
+	position: absolute;
+	z-index: 100;
+	margin: -2.4em 0.9em 0 0;
+	font-weight: 300;
+	right: 0;
+	font-size: 40px;
+	border: 3px solid #fff;
+	padding: 5px 20px;
+}
+
+.fc-calendar-wrap h3 {
+    color: #fff;
+    position: absolute;
+    z-index: 100;
+    margin: -2.4em 0.9em 0 0;
+    font-weight: 300;
+    right: 0;
+    font-size: 30px;
+    border: 3px solid #fff;
+    padding: 5px 20px;
+}
+
+.fc-calendar-container {
+	position: relative;
+	height: 300px;
+	width: 100%;
+}
+
+.fc-calendar {
+	width: 100%;
+	height: 100%;
+    background: #fff;
+}
+
+.fc-calendar .fc-head {
+	height: 30px;
+	line-height: 30px;
+	background: #a42121;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.fc-calendar .fc-body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	height: -moz-calc(100% - 30px);
+	height: -webkit-calc(100% - 30px);
+	height: calc(100% - 30px);
+	padding: 15px;
+    background: #fff;
+}
+
+.fc-calendar .fc-row {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+.fc-four-rows .fc-row  {
+	height: 25%;
+}
+
+.fc-five-rows .fc-row  {
+	height: 20%;
+}
+
+.fc-six-rows .fc-row {
+	height: 16.66%;
+	height: -moz-calc(100%/6);
+	height: -webkit-calc(100%/6);
+	height: calc(100%/6);
+}
+
+.fc-calendar .fc-row > div,
+.fc-calendar .fc-head > div {
+	float: left;
+	height: 100%;
+	width:  14.28%; /* 100% / 7 */
+	width: -moz-calc(100%/7);
+	width: -webkit-calc(100%/7);
+	width: calc(100%/7);
+	position: relative;
+}
+
+/* IE 9 is rounding up the calc it seems */
+.ie9 .fc-calendar .fc-row > div,
+.ie9 .fc-calendar .fc-head > div {
+	width:  14.2%;
+}
+
+.fc-calendar .fc-row > div {
+	border-right: 1px solid #ddd;
+	padding: 4px;
+	overflow: hidden;
+	position: relative;
+}
+
+.fc-calendar .fc-head > div {
+	text-align: center;
+}
+
+.fc-calendar .fc-row > div > span.fc-date {
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #ceb1bf;
+	bottom: 5px;
+	right: 5px;
+	text-align: right;
+}
+
+.fc-calendar .fc-row > div > span.fc-weekday {
+	padding-left: 5px;
+	display: none;
+}
+
+.fc-calendar .fc-row > div.fc-today {
+	background: #f3e0e9;
+}
+
+.fc-calendar .fc-row > div.fc-out {
+	opacity: 0.6;
+}
+
+.fc-calendar .fc-row > div:last-child,
+.fc-calendar .fc-head > div:last-child {
+	border-right: none;
+}
+
+.fc-calendar .fc-row:last-child {
+	border-bottom: none;
+}
+
+.fc-calendar-wrap-top {
+    /*border: 1px solid #1883ba;*/
+    margin-top: 0px;
+    color: #000;
+}
+
+.fc-calendar-wrap-top h2 {
+    /*border: 3px solid #fff;*/
+    /*color: #fff;*/
+    position: absolute;
+    z-index: 100;
+    /*margin: -2.4em 0.9em 0 0;*/
+    font-weight: 300;
+    right: 0;
+    font-size: 40px;
+    padding: 10px 20px;
+}
+
+.fc-calendar-wrap-top h3 {
+    /*border: 3px solid #fff;*/
+    /*color: #fff;*/
+    position: absolute;
+    z-index: 100;
+    /*margin: -2.4em 0.9em 0 0;*/
+    font-weight: 300;
+    right: 0;
+    font-size: 30px;
+    padding: 5px 20px;
+}
+
+.fc-calendar-wrap-bottom {
+    /*border: 1px solid #5cb85c;*/
+    color: #000;
+    margin-top: 0px;
+}
+
+/* ChatBox CSS */
+.chat-box-main {
+    max-height:250px;
+    overflow:auto;
+
+}
+
+.chat-box-div {
+    /*border:2px solid #A12EB3;*/
+    border-bottom:2px solid #A12EB3;
+}
+
+.chat-box-head {
+    padding: 10px 15px;
+    border-bottom: 2px solid #A12EB3;
+    background-color: #B25AE5;
+    color: #fff;
+    text-align: center;
+}
+
+.chat-box-left {
+    width: 100%;
+    height: auto;
+    padding: 15px 0px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    background: #42ba4d;
+    font-size:14px;
+    color: #fff;
+}
+
+.chat-box-left:after {
+    top: 0%;
+    left: 9%;
+    border: solid transparent;
+    content: "";
+    position: absolute;
+    border-top-color: #42ba4d;
+    border-width: 10px;
+    margin-left: -50px;
+}
+
+.chat-box-name-left {
+    margin-top: 30px;
+    margin-left: 10px;
+    text-align:left;
+    color:#363636;
+}
+
+.chat-box-name-left small{
+    font-size: 12px;
+    color: grey;
+}
+
+.chat-box-name-left button{
+    position: relative;
+    left: 410px;
+    display: block;
+}
+
+
+.chat-box-footer {
+    background-color: #D8D8D8;
+    padding: 10px;
+}
+
+.chat-box-new {
+    max-height:554px;
+    overflow:auto;
+}
+
+.chat-box-new-div {
+    border:2px solid #ff6a00;
+    border-bottom:2px solid #ff6a00;
+}
+
+.chat-box-new-head {
+    padding: 10px 15px;
+    border-bottom: 2px solid #ff6a00;
+    background-color: #ff6a00;
+    color: #fff;
+    text-align: center;
+}
+/* ChatBox CSS */
+
+/* Chat Form */
+.chatpost{
+    /*border: 1px solid brown;*/
+    height: 100px;
+    padding: 5px 15px 0px;
+}
+.chatpost p{
+    font-size: 14px;
+}
+.form-group{
+    margin: 0px;
+}
+
+.form-group .text-area{
+    /*border: 1px solid #c7254e;*/
+    margin-top: 10px;
+    height: 50px;
+}
+
+.form-group-button{
+    position: relative;
+    top: -5px;
+    margin: 20px 10px 0px;
+}
+/* Chat Form */
+
+/*Validation CSS*/
+.speech {
+    position: relative;
+    margin: 0px;
+    top: -5px;
+    /*width: 200px;*/
+    color: #fff;
+    height: 20px;
+    text-align: center;
+    line-height: 16px;
+    background-color: #A61A13;
+    border: 2px solid #FF8B78;
+    font-size: 12px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    /*-webkit-box-shadow: 2px 2px 4px #FF8B78;*/
+    /*-moz-box-shadow: 2px 2px 4px #FF8B78;*/
+    /*box-shadow: 2px 2px 4px #FF8B78;*/
+}
+
+.speech:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 18px;
+    border: 11px solid;
+    border-color: #FF8B78 transparent transparent #FF8B78;
+}
+
+.speech:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 32px;
+    top: 15px;
+    border: 10px solid;
+    border-color: #A61A13 transparent transparent #A61A13;
+}
+/* Validation CSS ends here*/

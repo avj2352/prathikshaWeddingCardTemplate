@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Sofia';
+    src:url('../fonts/Sofia-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container > header h1{
+    font-family: Sofia;
+    font-style: italic;
+}
+
+.myNavigation{
+    /*border: 1px solid #c7254e;*/
+    position: relative;
+    top: -45px;
+}
+
+.myNavigation nav{
+    text-align: center;
+}
+
+.myNavigation a{
+    display: inline-block;
+    text-align: center;
+    padding: 0px 15px;
+}
+
+.myNavigation a:visited{
+    text-decoration: none;
+}
+
+#myChatBackground{
+    background: url("../images/demo2/chatbox_up.jpg");
+}
+
+.chatBubble{
+    border: 1px solid #5cb85c;
+    margin: 10px 10px 20px 10px;
+    padding-bottom: 5px;
+    background: #58bd62;
+    color: #fff;
+    /*Rounded corners*/
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+}
+
+
+.chatBubble>.text{
+    /*border: 1px solid #c7254e;*/
+    padding: 10px;
+    text-align: left;
+}
+
+.chatBubble>.details{
+    font-size: 14px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+
+@media screen {
+    .myNavigation a:visited{
+        text-decoration: none;
+    }
+    .myNavigation a{
+        text-decoration: none;
+    }
+}
+

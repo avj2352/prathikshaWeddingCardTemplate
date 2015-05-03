@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-2">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathiksha Weds Rakesh</title>
+    <meta name="description"
+          content="Prathiksha and Rakesh formally invite you for their wedding on May 25th 2015. This is an online Wedding card invite"/>
+    <meta name="keywords"
+          content="innovoskies, wedding card, wedding, marriage, angular, firebase, 3d, prathiksha, rakesh, May, 2015"/>
+    <meta name="author" content="Pramod AJ"/>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bookblock.css"/>
+    <!-- custom demo style -->
+    <link rel="stylesheet" type="text/css" href="css/demo2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/calendar.css"/>
+    <script src="js/modernizr.custom.js"></script>
+    <!--Angular JS Dependencies-->
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/lib/angular/angular-animate.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+    <!--Firebase Dependencies-->
+    <script src="js/myapp.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/prathiksha.css"/>
+    <link rel="stylesheet" href="css/transitions.css"/>
+    <!--Angular JS Dependencies ends here-->
+</head>
+<body ng-app="myApp">
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53f4b64d78630cb1"
+        async="async"></script>
+<div class="container">
+    <!-- Top Navigation -->
+    <div class="codrops-top clearfix">
+        <audio src="audio/JodhaAkbar.mp3" preload="auto" autoplay loop/>
+    </div>
+    <header>
+        <h1>Prathiksha weds Rakesh</h1>
+
+        <h1><span style="font-size: 18px">Please leave your comments in the last page!!</span></h1>
+    </header>
+    <div class="main clearfix">
+        <div class="bb-custom-wrapper">
+            <!--Invitation Card Wrapper Tag-->
+            <div id="bb-bookblock" class="bb-bookblock">
+                <!--Cover page section-->
+                <div class="bb-item">
+                    <img class="bb-custom-img" src="images/demo2/1.png" alt="Prathiksha and Rakesh photo"/>
+
+                    <div class="fc-calendar-wrap">
+                        <div class="fc-calendar-container">
+                            <img class="bb-custom-img" src="images/demo2/cover.jpg" alt="cover image"/>
+                        </div>
+                        <!--main fc-calendar-conainer-->
+                    </div>
+                </div>
+                <!--Cover page section ends here-->
+                <!--Page 1 & 2 section-->
+                <div class="bb-item">
+                    <div class="fc-calendar-wrap-top">
+                        <div class="fc-calendar-container">
+                            <div class="fc-calendar">
+                                <!--Online Post Section-->
+                                <div class="fc-body">
+                                    <img class="bb-custom-img" src="images/demo2/3.jpg" alt="page 01"/>
+                                </div>
+                                <!--Online Post Section ends here-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fc-calendar-wrap-bottom">
+                        <div class="fc-calendar-container">
+                            <div class="fc-calendar">
+                                <!--Online Post Section-->
+                                <div class="fc-body">
+                                    <img class="bb-custom-img" src="images/demo2/4.jpg" alt="page 02"/>
+                                </div>
+                                <!--Online Post Section ends here-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Page 1 & 2 section ends here-->
+                <!--Page 3 & 4 section-->
+                <div class="bb-item">
+                    <div class="fc-calendar-wrap-top">
+                        <div class="fc-calendar-container">
+                            <div class="fc-calendar">
+                                <!--Online Post Section-->
+                                <div class="fc-body">
+                                    <img class="bb-custom-img" src="images/demo2/7.jpg" alt="page 03"/>
+                                </div>
+                                <!--Online Post Section ends here-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fc-calendar-wrap-bottom">
+                        <div class="fc-calendar-container">
+                            <div class="fc-calendar">
+                                <!--Online Post Section-->
+                                <div class="fc-body">
+                                    <img class="bb-custom-img" src="images/demo2/8.jpg" alt="page 04"/>
+                                </div>
+                                <!--Online Post Section ends here-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Page 3 & 4 section ends here-->
+                <!--Page 5 & 6 section - Chats section-->
+                <div class="bb-item">
+                    <div class="fc-calendar-wrap-top">
+                        <div class="fc-calendar-container">
+                            <div class="fc-calendar">
+                                <div class="fc-head">Best Wishes Panel</div>
+                                <!--Online Post Section-->
+                                <div class="fc-body" ng-controller="firebaseController" id="myChatBackground">
+                                    <article class="chatbody emotions">
+                                        <div class="panel-body chat-box-main">
+                                            <!-- Chat Snippet -->
+                                            <div class="chatgroup" ng-repeat="(key,chat) in chats">
+                                                <div class="chatBubble">
+                                                    <div class="text">{{chat.comment}}</div>
+                                                    <div class="details">
+                                                        <span> - {{chat.name}} <small>sent on:
+                                                            {{displayDate(chat.date)}}
+                                                        </small></span>
+                                                    </div>
+                                                    <div class="details">
+                                                        <button type="button" class="btn btn-info btn-xs right"
+                                                                ng-click="updateLike(key)">{{chat.like}} Likes
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- chatgroup -->
+                                            <!-- Chat Snippet ends here -->
+                                        </div>
+                                        <!-- chat-box-main -->
+                                    </article>
+                                </div>
+                                <!--Online Post Section ends here-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fc-calendar-wrap-bottom">
+                        <div class="fc-calendar-container">
+                            <div class="fc-calendar">
+                                <div class="fc-head">Post Your Comments below!</div>
+                                <!--Online Post Section-->
+                                <div class="chatpost">
+                                    <form ng-controller="firebaseController" novalidate id="main-register-form"
+                                          ng-submit="addComment()" class="contact-form" name="myForm">
+                                        <p class="alert alert-dismissible alert-info" ng-if="!thankYou">Please enter
+                                            your name &amp; your comments below</p>
+
+                                        <p class="alert alert-dismissible alert-success" ng-if="thankYou"><span
+                                                class="glyphicon glyphicon-heart"></span>&nbsp;{{thankYou}}</p>
+
+                                        <div class="form-group">
+                                            <p class="speech"
+                                               ng-show="myForm.myname.$invalid && myForm.myname.$touched">*Please enter
+                                                your name !</p>
+
+                                            <p class="speech"
+                                               ng-show="myForm.myname.$error.minlength || myForm.myname.$error.maxlength">
+                                                Name should only be 3-10 chars long!</p>
+                                            <input type="text" placeholder="Your Name" name="myname"
+                                                   class="form-control" ng-model="myname" ng-required="true"
+                                                   tabindex="1" ng-minlength="3" ng-maxlength="10"/>
+                                        </div>
+                                        <!-- form-group -->
+                                        <div class="form-group">
+                                            <p class="speech"
+                                               ng-show="myForm.comment.$invalid && myForm.comment.$touched">*Oops..You
+                                                need to fill this !</p>
+                                            <input type="text" rows="4" placeholder="Enter Comment" name="comment"
+                                                   class="form-control text-area" ng-model="comment" ng-required="true"
+                                                   tabindex="2"/>
+                                        </div>
+                                        <!-- form-group -->
+                                        <div class="form-group-button">
+                                            <p><input ng-disabled="myForm.$invalid" type="submit" name="submit"
+                                                      value="Post Comment" class="btn btn-primary" required="required"
+                                                      tabindex="3"/></p>
+                                        </div>
+                                        <!-- form-group -->
+                                    </form>
+                                </div>
+                                <!--Online Post Section ends here-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Page 5 & 6 section - Chats section ends here-->
+            </div><!--Invitation Card Wrapper Tag ends here-->
+            <!--bb-bookblock-->
+        </div>
+    </div>
+    <div class="row myNavigation col-lg-12">
+        <nav class="center-block">
+            <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+            <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+        </nav>
+    </div>
+</div>
+<!-- /container -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery.bookblock.js"></script>
+<script src="js/mypage.js"></script>
+<script>
+    Page.init();
+</script>
+</body>
+</html>
